@@ -11,14 +11,14 @@ const setup = (props={}) => {
 }
 
 test("renders without error",() => {
-  const wrapper = setup();
+  const wrapper = setup({success: true});
   const component = findByTestAttr(wrapper, 'component-congrats');
   expect(component.length).toBe(1);
 })
 
-test("renders no text when 'success' prop is false", () => {
+test("renders no component when 'success' prop is false", () => {
   const wrapper = setup();
-  const message = findByTestAttr(wrapper, 'congrats-message');
+  const message = findByTestAttr(wrapper, 'component-congrats');
 
   expect(message.length).toBe(0);
 })
