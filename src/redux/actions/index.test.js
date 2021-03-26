@@ -1,6 +1,15 @@
 import moxios from 'moxios';
 import { storeFactory } from '../../../test/testUtils';
-import { getSecretWord } from './';
+import { getSecretWord, correctGuess, } from './';
+import { actionTypes } from '../actions';
+
+
+describe('correctGuess', () => {
+  test('returns an action with tupe correct guess', () => {
+    const action = correctGuess();
+    expect(action).toStrictEqual({type: actionTypes.CORRECT_GUESS})
+  })
+})
 
 describe('getSecretWord action creator', () => {
   beforeEach(() => {
