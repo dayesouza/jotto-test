@@ -22,13 +22,13 @@ test('renders without error', () => {
   expect(app).toHaveLength(1);
 })
 
-test.skip('renders Jotto title', () => {
+test('renders Jotto title', () => {
   const wrapper = setup();
   const title = wrapper.find("h1");
   expect(title.text()).toBe('Jotto');
 });
 
-describe.skip('get secret word', () => {
+describe('get secret word', () => {
   beforeEach(() => {
     mockGetSecretWord.mockClear();
   })
