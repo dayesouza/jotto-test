@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { guessWord } from '../../redux/actions';
 
-function Input({secretWord}) {
+function Input() {
   const [currentGuess, setCurrentGuess] = React.useState("");
   const dispatch = useDispatch();
   const success = useSelector(state => state.success);
@@ -32,15 +32,5 @@ function Input({secretWord}) {
     </>
   );
 }
-
-Input.propTypes = {
-  secretWord: PropTypes.string.isRequired
-};
-
-// const mapStateToProps = ({success}) => {
-//   return { success };
-// }
-
-// export default connect(mapStateToProps)(Input);
 
 export default Input;

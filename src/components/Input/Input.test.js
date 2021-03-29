@@ -80,7 +80,7 @@ describe('state controlled input field', () => {
     const inputBox = findByTestAttr(wrapper, 'input-box');
     const mockEvent = { target: { value: 'train' } };
 
-    inputBox.simulate("change", mockEvent);
+    inputBox.simulate("change", mockEvent);5
     expect(mockSetCurrentGuess).toHaveBeenCalledWith('train');
   });
 })
